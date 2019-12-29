@@ -1,0 +1,38 @@
+<div class="container main-container cuerpo">
+    <div class="boton">
+        <button class="btn btn-outline-info ">Volver</button>
+    </div>
+    <div class="row">
+      
+        <div class="col-md-10">
+            
+            <div class="form-group">
+                <form>
+                <label for="">Buscar</label>
+                <input type="text" (keyup.enter)="buscarPelicula()" [(ngModel)]="buscar" name="buscar" class="form-control">
+            </form>
+          
+            </div>
+
+        </div>
+    </div>
+</div>   
+
+        <div class="container main-container" >
+            <div class="row m-5" style="margin:auto">
+                <div class="card text-white bg-dark mb-3 tarjeta " *ngFor="let pelicula of busqueda.results;let i=index" style="max-width: 30rem;margin-left:2vh;">
+                    <img [src]="pelicula|images" style="max-height:40vh;"alt="pelicula.original_title">        
+                    <div class="card-header"style="background-color:black;text-align:center"><h5>{{pelicula.title}}</h5></div>
+                  </div>
+            </div>
+        
+        
+        </div>
+
+      
+
+
+
+
+
+
